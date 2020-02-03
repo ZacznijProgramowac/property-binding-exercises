@@ -1,0 +1,71 @@
+<div class="container">
+  <h1>Ćwiczenia z Property Binding</h1>
+  <h3>
+    1. Stwórz element DIV o rozmiarach 50x100 px. Zbinduj do property 'style' i
+    'background' pole z klasy komponentu. Pole to powinno mieć wartość czarnego
+    koluru.
+  </h3>
+  Podgląd:
+  <div style="height: 50px; width: 500px" [style.background]="blackDiv"></div>
+
+  <h3>
+    2. Stwórz podobny element DIV co wyżej o kolorze żółtym. Za pomocą
+    przycisku, podmień kolor na czerwony.
+  </h3>
+  Podgląd:
+  <div style="height: 50px; width: 500px" [style.background]="yellowDiv"></div>
+  <button class="btn" (click)="yellowDiv = 'red'">Zmiana</button>
+
+  <h3>
+    3. Stwórz element input. Stwórz pole w klasie komponentu z tekstem: 'Wpisz
+    coś'. Zbinduje to pole z klasy z elementm input. Gdy kliknie się w pole
+    tekstowe, napis powinien znikać.
+  </h3>
+  Podgląd:
+  <input [value]="text" (focusin)="text = ''" />
+
+  <h3>4. Skopiuj poniższy kod do klasy komponentu i zbinduj do elementu DIV</h3>
+  <textarea disabled>
+  <h2>Anglar jest fajny</h2><blockquote>Ale trzeba się dużo uczyć</blockquote>
+  </textarea>
+  Podgląd:
+  <div [innerHTML]="htmlText"></div>
+
+  <h3>
+    6. Ambitne! Dwa przyciski powinny się na wzajem przełączać. Gdy jeden jest
+    wyłączony, drugi powinien być włączony. Kliknięcie w przycisk włączony,
+    powinno go wyłączyć i włączyć przycisk, który był wyłączony. Wykorzystaj do
+    tego tylko jedno pole w klasie..
+  </h3>
+  <button
+    class="btn"
+    [disabled]="isDisabled"
+    (click)="isDisabled = !isDisabled"
+  >
+    Pierwszy
+  </button>
+  <button
+    class="btn"
+    [disabled]="!isDisabled"
+    (click)="isDisabled = !isDisabled"
+  >
+    Drugi
+  </button>
+
+  <h3>
+    7. Stwórz zielony element DIV. Za pomocą przycisku zmieniaj kolor na
+    niebieski. Przycisk powinien pozwalać zmieniać kolor na przemian. Do osbługi
+    może wystarczyć nawet jedno pole w klasie komponentu.
+  </h3>
+  Podgląd:
+  <div
+    style="height: 50px; width: 500px"
+    [style.background]="colorSwitch"
+  ></div>
+  <button
+    class="btn"
+    (click)="colorSwitch = colorSwitch === 'green' ? 'blue' : 'green'"
+  >
+    Zmiana
+  </button>
+</div>
