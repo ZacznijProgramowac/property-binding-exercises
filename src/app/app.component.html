@@ -1,42 +1,61 @@
 <div class="container">
-  <h1>Ćwiczenia z Property Binding</h1>
-  <h3>
-    1. Stwórz element DIV o rozmiarach 50x100 px. Zbinduj do property 'style' i
-    'background' pole z klasy komponentu. Pole to powinno mieć wartość czarnego
-    koluru.
-  </h3>
-  Podgląd:
-  <div style="height: 50px; width: 500px" [style.background]="blackDiv"></div>
+  <h1>
+    Ćwiczenia z Property Binding. Do tego zadania potrzebujesz stworzyć swój
+    projekt. Ewentualne wykorzystaj StackBlitz lub narzędzie online
+  </h1>
+  <h1>Zadanie 1</h1>
+  <ol>
+    <li>Stwórz element DIV.</li>
+    <li>Stwórz w komponencie pole z nazwą koloru np: color = 'red'</li>
+    <li>
+      Przez property binding zbinduje kolor zmieniając tło w elemencie DIV
+    </li>
+  </ol>
+  <h3>Przykład działania:</h3>
+  <div style="height: 50px; width: 800px" [style.background]="blackDiv"></div>
 
-  <h3>
-    2. Stwórz podobny element DIV co wyżej o kolorze żółtym. Za pomocą
-    przycisku, podmień kolor na czerwony.
-  </h3>
-  Podgląd:
+  <h1>Zadanie 2</h1>
+  <ol>
+    <li>Stwórz podobny element DIV co wyżej o kolorze żółtym.</li>
+    <li>Za pomocą przycisku, podmień kolor na czerwony.</li>
+  </ol>
+  <h3>Przykład działania:</h3>
   <div style="height: 50px; width: 500px" [style.background]="yellowDiv"></div>
   <button class="btn" (click)="yellowDiv = 'red'">Zmiana</button>
 
-  <h3>
-    3. Stwórz element input. Stwórz pole w klasie komponentu z tekstem: 'Wpisz
-    coś'. Zbinduje to pole z klasy z elementm input. Gdy kliknie się w pole
-    tekstowe, napis powinien znikać.
-  </h3>
-  Podgląd:
+  <h1>Zadanie 3</h1>
+  <ol>
+    <li>Stwórz element input.</li>
+    <li>
+      Stwórz pole w klasie komponentu nap przykład z napisem: 'Wpisz coś'.
+    </li>
+    <li>Zbinduj to pole z klasy z elementem input.</li>
+    <li>Gdy kliknie się w pole tekstowe, napis powinien znikać.</li>
+  </ol>
+
+  <h3>Przykład działania:</h3>
   <input [value]="text" (focusin)="text = ''" />
 
-  <h3>4. Skopiuj poniższy kod do klasy komponentu i zbinduj do elementu DIV</h3>
-  <textarea disabled>
+  <h1>Zadanie 4</h1>
+  <ol>
+    <li>Wykorzystaj poniższy kod HTML</li>
+    <li>Przypisz go do pola w klasie komponentu</li>
+    <li>Zbinduj pole do elementu div</li>
+  </ol>
+  <textarea disabled rows="4">
   <h2>Anglar jest fajny</h2><blockquote>Ale trzeba się dużo uczyć</blockquote>
   </textarea>
-  Podgląd:
+  <h3>Przykład działania:</h3>
   <div [innerHTML]="htmlText"></div>
 
-  <h3>
-    6. Ambitne! Dwa przyciski powinny się na wzajem przełączać. Gdy jeden jest
-    wyłączony, drugi powinien być włączony. Kliknięcie w przycisk włączony,
-    powinno go wyłączyć i włączyć przycisk, który był wyłączony. Wykorzystaj do
-    tego tylko jedno pole w klasie..
-  </h3>
+  <h1>Zadanie 5</h1>
+  <ol>
+    <li>Ambitne!</li>
+    <li>Dwa przyciski powinny się na wzajem przełączać.</li>
+    <li>Gdy jeden jest wyłączony, drugi powinien być włączony.</li>
+  </ol>
+
+  <h3>Przykład działania:</h3>
   <button
     class="btn"
     [disabled]="isDisabled"
@@ -52,11 +71,14 @@
     Drugi
   </button>
 
-  <h3>
-    7. Stwórz zielony element DIV. Za pomocą przycisku zmieniaj kolor na
-    niebieski. Przycisk powinien pozwalać zmieniać kolor na przemian. Do osbługi
-    może wystarczyć nawet jedno pole w klasie komponentu.
-  </h3>
+  <h1>Zadanie 6</h1>
+  <ol>
+    <li>Stwórz zielony element DIV.</li>
+    <li>Za pomocą przycisku zmieniaj kolor na niebieski.</li>
+    <li>Przycisk powinien pozwalać zmieniać kolor na przemian.</li>
+    <li>Do obsługi może wystarczyć nawet jedno pole w klasie komponentu.</li>
+  </ol>
+
   Podgląd:
   <div
     style="height: 50px; width: 500px"

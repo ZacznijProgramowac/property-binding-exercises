@@ -9,13 +9,8 @@ export class AppComponent {
   blackDiv = 'black';
   yellowDiv = 'yellow';
   colorSwitch = 'green';
-
-
-  logo = '/assets/angular.png';
-  blackLogo = '/assets/angular_solidBlack.png';
-  text = 'Zadanie wykonane!';
-  htmlText = '<h2>Anglar jest fajny</h2><blockquote>Ale trzeba się dużo uczyć</blockquote>';
+  text = 'Wpisz coś';
+  htmlText =
+    '<h2>Anglar jest fajny</h2><blockquote>Ale trzeba się dużo uczyć</blockquote>';
   isDisabled = true;
-  changeColor = false;
-
 }
